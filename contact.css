@@ -1,0 +1,308 @@
+/* ===== Global Styles ===== */
+body {
+    margin: auto 0; 
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    background: #F5E6D3; 
+    color: #333; 
+}
+
+/* ===== Header & Navigation ===== */
+header {
+    background: #7B2C2C; 
+    padding: 15px 20px; 
+}
+
+nav {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+.logo img {
+    height: 100px; /* Logo height */
+    width: auto; /* Keep aspect ratio */
+    border-radius: 50%; /* Make logo round */
+}
+
+.nav-links {
+    list-style: none; /* Remove bullets */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Arrange links horizontally */
+    gap: 10px; /* Space between links */
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    position: relative;
+    color: #F5E6D3; 
+    text-decoration: none; 
+    padding: 8px 12px;
+    font-weight: 400;
+    transition: color 0.3s ease; 
+    font-size: 1.5rem;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 1px; 
+    bottom: 0;
+    left: 0;
+    background-color: #F5E6D3; 
+    border-radius: 2px;
+    transition: width 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%; 
+}
+
+.nav-links a:hover {
+    color: #F5E6D3; 
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    width: 100%;
+    height: 90vh; 
+    text-align: center;
+    padding: 100px 20px 0;
+    color: white;
+    background: url('images/image1.jpg') no-repeat center center; 
+    background-size: cover;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero h2 {
+    font-size: 5rem;
+    font-weight: 1000;
+    color: #F5E6D3;
+}
+
+.hero p {
+    font-size: 2rem;
+    font-style: italic;
+    color: #F5E6D3;
+}
+
+
+.contact-section {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: #7B2C2C;
+    padding: 40px 20px;
+  }
+
+  .contact-container {
+    display: flex;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    align-items: flex-start;
+  }
+
+  .contact-description {
+    flex: 1;
+    line-height: 1.6;
+    font-size: 1.75rem;
+
+  }
+
+  .contact-description h2 {
+    margin-bottom: 20px;
+    font-size: 3rem;
+  }
+
+  .contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .contact-form label {
+    font-weight: bold;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #7B2C2C;
+    border-radius: 4px;
+    font-size: 2rem;
+    color: #7B2C2C;
+    background: transparent;
+  }
+
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: 2px solid #7B2C2C;
+  }
+
+  .contact-form button {
+    background: #7B2C2C;
+    color:#F5E6D3;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+
+  }
+
+  .contact-form button:hover {
+    background: #5a201f;
+  }
+
+  /* Responsive */
+  @media (max-width: 700px) {
+    .contact-container {
+      flex-direction: column;
+    }
+  }
+
+
+
+/* ===== Footer ===== */
+.footer-container {
+    margin: 0 auto;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #F5E6D3;
+    gap: 40px;
+    flex-wrap: wrap;
+    background: #7B2C2C;
+    border-top: 1px solid #eaeaea;
+}
+
+.footerlogo {
+    flex: 1 1 200px;
+    display: flex;
+    align-items: center;
+}
+
+.footerlogo img {
+    max-width: 230px;
+    height: auto;
+    border-radius: 12px;
+}
+
+.footer-center {
+    flex: 1.5 1 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.subscribe {
+    text-align: center;
+}
+
+.subscribe h3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.subscribe p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.subscribe form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.subscribe input[type="email"] {
+    flex: 1 1 220px;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background-color: #F5E6D3;
+}
+
+.subscribe button {
+    padding: 12px 25px;
+    font-weight: 600;
+    background-color: #F5E6D3;
+    color:#7B2C2C;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe button:hover {
+    background-color: #5a1f1f;
+    color:#F5E6D3;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.2s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.contact-hours {
+    flex: 1 1 250px;
+    font-size: 1.5rem;
+    line-height: 2;
+}
+
+.contact-hours h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.Rights {
+    text-align: center;
+    background-color: #7B2C2C;
+    color: #F5E6D3;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:#7B2C2C;
+    border-top:1px #F5E6D3 solid;
+    font-size: 1em;
+    padding: 20px 10px;
+}
+
+/* ===== Responsive Footer ===== */
+@media (max-width: 800px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* ===== Smooth Scrolling ===== */
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+}
